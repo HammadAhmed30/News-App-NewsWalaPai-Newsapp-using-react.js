@@ -1,0 +1,101 @@
+import React from "react";
+import News from "./News";
+import { Route, Routes } from "react-router-dom";
+export default function MainNewsCnt() {
+  return (
+    <div
+      style={{
+        width: "min(100% - 14px , 1000px)",
+        marginInline: "auto",
+        marginTop: "2em",
+      }}
+    >
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <News
+              key="General"
+              titleName="General"
+              category="general"
+              pageSize="5"
+            />
+          }
+        />
+        <Route
+          exact
+          path="/sports"
+          element={
+            <News
+              key="Sports"
+              titleName="Sports"
+              category="sports"
+              pageSize="5"
+            />
+          }
+        />
+        <Route
+          exact
+          path="/health"
+          element={
+            <News
+              key="Health"
+              titleName="Health"
+              category="health"
+              pageSize="5"
+            />
+          }
+        />
+        <Route
+          exact
+          path="/entertainment"
+          element={
+            <News
+              key="Entertainment"
+              titleName="Entertainment"
+              category="entertainment"
+              pageSize="5"
+            />
+          }
+        />
+        <Route
+          exact
+          path="/technology"
+          element={
+            <News
+              key="Technology"
+              titleName="Technology"
+              category="technology"
+              pageSize="5"
+            />
+          }
+        />
+        <Route
+          exact
+          path="/business"
+          element={
+            <News
+              key="Business"
+              titleName="Business"
+              category="business"
+              pageSize="5"
+            />
+          }
+        />
+        <Route
+          exact
+          path="/science"
+          element={
+            <News
+              key="Science"
+              titleName="Science"
+              category="science"
+              pageSize="5"
+            />
+          }
+        />
+      </Routes>
+    </div>
+  );
+}
